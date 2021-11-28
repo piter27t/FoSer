@@ -16,12 +16,16 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
 
         <activity android:name=".SettingsActivity"
             android:parentActivityName=".MainActivity"
             android:label="@string/label_settings">
         </activity>
+        <service android:name=".MyForegroundService"
+            android:enabled="true">
+        </service>
     </application>
-
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"></uses-permission>
 </manifest>
